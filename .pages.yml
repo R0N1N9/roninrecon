@@ -59,6 +59,8 @@ content:
               label: Wide (2 columns)
             - name: tall
               label: Tall (2 rows)
+            - name: full
+              label: Full width (whole row, 2 rows tall)
       - name: video_url
         label: Video link
         type: string

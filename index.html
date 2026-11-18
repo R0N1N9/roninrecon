@@ -92,7 +92,7 @@ a { color: inherit; }
 }
 .hero .wrap {
   position: relative; z-index: 1;
-  display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 40px; align-items: stretch;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: stretch;
   padding-block: clamp(64px, 11vw, 132px) clamp(48px, 8vw, 96px);
 }
 .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--od-hi); margin: 0 0 22px; flex-wrap: wrap; }
@@ -130,16 +130,16 @@ h1 .lo { color: var(--earth); }
 .ruler .tick.cap::before { background: var(--blood); width: 22px; }
 .ruler .tick.gnd { color: var(--earth); }
 .ruler .tick.gnd::before { background: var(--earth); width: 22px; }
-.hero-shot { align-self: end; margin: 0; width: clamp(260px, 27vw, 380px); display: grid; gap: 10px; }
-.hero-shot .frame { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--panel); border: 1px solid var(--rule); }
-.hero-shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 26% center; }
+.hero-shot { align-self: end; margin: 0; width: clamp(300px, 34vw, 480px); display: grid; gap: 10px; }
+.hero-shot .frame { position: relative; aspect-ratio: 3 / 2; overflow: hidden; background: var(--panel); border: 1px solid var(--rule); }
+.hero-shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero .ruler { display: none; }
+@media (min-width: 1440px) { .hero .wrap { grid-template-columns: minmax(0, 1fr) auto auto; } .hero .ruler { display: flex; } }
 .hero-shot figcaption { display: flex; justify-content: space-between; gap: 12px; color: var(--dim); }
 .hero-shot figcaption b { color: var(--bronze); font-weight: 500; }
-@media (max-width: 1080px) { .hero .wrap { grid-template-columns: minmax(0, 1fr) auto; } .ruler { display: none; } }
 @media (max-width: 820px) {
   .hero .wrap { grid-template-columns: minmax(0, 1fr); gap: 36px; }
   .hero-shot { width: 100%; max-width: 560px; }
-  .hero-shot .frame { aspect-ratio: 3 / 2; }
 }
 
 /* Stats */
@@ -185,6 +185,7 @@ h2 { font: 800 clamp(2.4rem, 6vw, 4.2rem)/.92 var(--display); text-transform: up
 .shot { position: relative; margin: 0; max-width: 100%; overflow: hidden; background: var(--panel); }
 .shot.wide { grid-column: span 2; }
 .shot.tall { grid-row: span 2; }
+.shot.full { grid-column: 1 / -1; grid-row: span 2; }
 .shot > button, .shot > a { all: unset; position: absolute; inset: 0; cursor: zoom-in; }
 .shot > a { cursor: pointer; }
 .shot > button:focus-visible, .shot > a:focus-visible { outline: 2px solid var(--bronze); outline-offset: -2px; }
@@ -205,7 +206,7 @@ h2 { font: 800 clamp(2.4rem, 6vw, 4.2rem)/.92 var(--display); text-transform: up
 @media (max-width: 560px) {
   .grid { grid-template-columns: minmax(0, 1fr); grid-auto-rows: auto; }
   .shot { aspect-ratio: 4 / 3; }
-  .shot.wide { grid-column: auto; }
+  .shot.wide, .shot.full { grid-column: auto; grid-row: auto; }
   .shot.tall { grid-row: auto; aspect-ratio: 4 / 5; }
 }
 
@@ -295,7 +296,7 @@ dialog.lb::backdrop { background: color-mix(in srgb, var(--ink) 94%, transparent
 .about .copy p:first-child { color: var(--bone); font-size: 1.3rem; line-height: 1.5; }
 .portrait { position: relative; aspect-ratio: 4 / 5; max-width: 100%; background: var(--panel); overflow: hidden; }
 .portrait canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
-.portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 30% center; }
 @media (max-width: 760px) { .about { grid-template-columns: minmax(0, 1fr); } .portrait { max-width: 360px; } }
 
 /* Contact */
@@ -521,7 +522,7 @@ footer a { text-decoration: none; }
     <div class="wrap">
       <div class="about">
         <div class="portrait" id="portrait">
-          <img src="media/images/monument-valley-road.jpg" alt="Walking down the empty highway toward the buttes of Monument Valley, camera in hand">
+          <img src="media/images/white-sands-kit.jpg" alt="Wearing wind goggles on the dunes at White Sands at sunset, with a Sony A7C, DJI Osmo Action 3 and tripod">
         </div>
         <div>
           <p class="eyebrow mono">About</p>
@@ -725,7 +726,7 @@ footer a { text-decoration: none; }
     if (!items.length) { grid.appendChild(el("p", { class: "grid-note", text: "New work is on the way." })); return; }
     items.forEach(function (it) {
       var cat = (it.category || "ground").toLowerCase();
-      var size = it.size === "wide" || it.size === "tall" ? it.size : "";
+      var size = ["wide", "tall", "full"].indexOf(it.size) > -1 ? it.size : "";
       var fig = el("figure", { class: "shot" + (size ? " " + size : ""), "data-cat": cat });
       var meta = [it.gear, it.location].filter(Boolean).join(" · ") || LABELS[cat] || "";
       if (it.image) {

@@ -1,14 +1,14 @@
 [
   {
-    "title": "Aerial reel",
-    "kicker": "Drone · DJI Mavic 3",
-    "url": "https://www.youtube.com/watch?v=I9Ff1H4a2sQ",
-    "note": ""
-  },
-  {
     "title": "Ground reel",
     "kicker": "Ground · Sony A7C",
     "url": "https://www.youtube.com/watch?v=TVmTxBYsA-4",
+    "note": ""
+  },
+  {
+    "title": "Aerial reel",
+    "kicker": "Drone · DJI Mavic 3",
+    "url": "https://www.youtube.com/watch?v=I9Ff1H4a2sQ",
     "note": ""
   }
 ]

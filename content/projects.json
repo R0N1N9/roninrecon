@@ -1,0 +1,43 @@
+[
+  {
+    "name": "ISR tools for the Mavic 3",
+    "kicker": "Search & rescue · Mapping",
+    "summary": "An offline toolkit for a Mavic 3 and DJI RC. It scans every photo on an SD card for signs of a missing person, plans search and mapping flights, and hands ground teams coordinates they can use.",
+    "points": [
+      "Photo triage: flags people, clothing, packs, tarps and vehicles, ranks the hits and places each one on a map",
+      "Search patterns: parallel track, expanding square and sector, exported as DJI waypoint files",
+      "Exports GPX, KML, GeoJSON and CSV for handheld GPS, CalTopo and ATAK",
+      "Runs on a laptop with no internet and never writes to the SD card"
+    ],
+    "tags": [
+      "Python",
+      "DJI Mavic 3",
+      "SAR",
+      "Photogrammetry"
+    ],
+    "image": "media/images/isr-triage.jpg",
+    "link": "",
+    "link_label": "Repository private for now"
+  },
+  {
+    "name": "IntelScraperStudio",
+    "kicker": "Photo & video workflow · In development",
+    "summary": "A personal studio app for photographers and videographers. Plug in a card and it imports, backs up and scores every clip, so the best footage is waiting when you sit down to edit. Later steps cut Shorts, Reels and YouTube videos to your music and publish only after you approve.",
+    "points": [
+      "Verified import: detects Sony and DJI cards, copies to a library and a backup drive, and checks every file",
+      "Clip scoring for focus, steadiness and light, with a keep or reject verdict and the best 3–8 second moment",
+      "Reads S-Log3 and D-Log M profiles, GPS, altitude and exposure from the cameras' own sidecar files",
+      "Music library with tempo, beat grid, sections and vibe, ready for cutting edits to the beat"
+    ],
+    "tags": [
+      "Python",
+      "FastAPI",
+      "FFmpeg",
+      "Sony A7C",
+      "DJI Mavic 3"
+    ],
+    "image": "media/images/intelscraperstudio.jpg",
+    "link": "https://github.com/R0N1N9/intelscraperstudio",
+    "link_label": "View on GitHub"
+  }
+]

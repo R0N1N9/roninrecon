@@ -9,6 +9,15 @@
     "video_url": ""
   },
   {
+    "title": "Moonlit switchbacks",
+    "category": "aerial",
+    "gear": "Mavic 3",
+    "location": "",
+    "image": "media/images/moonlit-switchbacks.jpg",
+    "size": "wide",
+    "video_url": ""
+  },
+  {
     "title": "Ridge line",
     "category": "ground",
     "gear": "Sony A7C",
@@ -42,15 +51,6 @@
     "location": "",
     "image": "media/images/canyon-walk.jpg",
     "size": "normal",
-    "video_url": ""
-  },
-  {
-    "title": "Badlands overlook",
-    "category": "ground",
-    "gear": "Sony A7C",
-    "location": "Badlands NP, SD",
-    "image": "media/images/badlands-overlook.jpg",
-    "size": "wide",
     "video_url": ""
   },
   {

@@ -228,6 +228,9 @@ dialog.lb::backdrop { background: color-mix(in srgb, var(--ink) 94%, transparent
 .sar-specs div + div { padding-left: 14px; border-left: 1px solid color-mix(in srgb, var(--midnight-hi) 40%, transparent); }
 .sar-specs b { font: 800 1.7rem/1 var(--display); font-variant-numeric: tabular-nums; }
 .sar-specs span { color: var(--midnight-hi); }
+.quote { margin: 0; display: grid; gap: 14px; }
+.quote blockquote { margin: 0; }
+.quote figcaption { color: var(--midnight-hi); }
 .pattern { width: 100%; max-width: 460px; aspect-ratio: 1; justify-self: center; }
 .pattern svg { width: 100%; height: 100%; display: block; overflow: visible; }
 @media (max-width: 860px) { .sar-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; } .pattern { max-width: 340px; } }
@@ -321,7 +324,7 @@ footer a { text-decoration: none; }
     <nav class="nav" aria-label="Sections">
       <a href="#work">Work</a>
       <a class="opt" href="#services">Services</a>
-      <a href="#sar">SAR</a>
+      <a href="#sar">ISR</a>
       <a class="opt" href="#projects">Projects</a>
       <a class="opt" href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -412,9 +415,12 @@ footer a { text-decoration: none; }
     <div class="wrap">
       <div class="sar-grid">
         <div class="sar-copy">
-          <p class="eyebrow mono">Search &amp; rescue</p>
-          <h2 id="sar-title">Eyes in the air when it counts</h2>
-          <p>I'm building toward aerial search and rescue: flying structured search patterns with the Mavic 3 and turning hundreds of photos into a short list of places a ground team should check.</p>
+          <p class="eyebrow mono">ISR (Intelligence, Surveillance, Reconnaissance) – Search &amp; Rescue</p>
+          <figure class="quote">
+            <blockquote><h2 id="sar-title">“With an eye in the sky, there is nothing to fear.”</h2></blockquote>
+            <figcaption class="mono">– Crypto (Apex Legends)</figcaption>
+          </figure>
+          <p>I'm building toward aerial search and rescue and surveying.</p>
           <p>I write my own field tools for it, and I'm glad to talk with SAR teams, agencies and landowners who could use another trained pilot.</p>
           <div class="sar-specs">
             <div><b>40–70 m</b><span class="mono">Search altitude AGL</span></div>
@@ -422,7 +428,7 @@ footer a { text-decoration: none; }
             <div><b>~1.6 cm</b><span class="mono">Per pixel at 60 m</span></div>
           </div>
           <div class="ctas" style="margin-top:10px">
-            <a class="btn" href="#projects">See the SAR toolkit</a>
+            <a class="btn" href="#projects">See ISR Studio</a>
             <a class="btn" href="#contact" data-inquiry="sar">Contact for SAR</a>
           </div>
         </div>

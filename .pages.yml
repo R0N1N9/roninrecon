@@ -28,6 +28,8 @@ content:
               label: Aerial (Mavic 3)
             - name: fpv
               label: FPV (Avata)
+            - name: action
+              label: Action (Action 3)
             - name: video
               label: Video
             - name: sar
@@ -42,7 +44,7 @@ content:
       - name: gear
         label: Shot on
         type: string
-        description: e.g. A7C, Mavic 3, Avata
+        description: e.g. A7C, Mavic 3, Avata, Action 3
       - name: location
         label: Location
         type: string

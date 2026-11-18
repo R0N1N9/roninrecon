@@ -134,17 +134,15 @@ h1 .lo { color: var(--earth); }
 
 /* Stats */
 .stats { border-bottom: 1px solid var(--rule); }
-.stats .wrap { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.stats .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .stat { padding: 26px 20px 24px 0; display: grid; gap: 6px; align-content: start; }
 .stat + .stat { border-left: 1px solid var(--rule); padding-left: 20px; }
 .stat b { font: 800 clamp(2rem, 4vw, 2.8rem)/1 var(--display); font-variant-numeric: tabular-nums; }
-.stat b.br { color: var(--bronze); }
 .stat span { color: var(--dim); }
 @media (max-width: 760px) {
   .stats .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .stat:nth-child(odd) { border-left: 0; padding-left: 0; }
   .stat:nth-child(n+3) { border-top: 1px solid var(--rule); }
-  .stat:nth-child(5) { grid-column: 1 / -1; }
 }
 
 /* Sections */
@@ -346,7 +344,7 @@ footer a { text-decoration: none; }
         </div>
       </div>
       <div class="ruler" aria-hidden="true">
-        <div class="tick cap">400 FT · PART 107 CEILING</div>
+        <div class="tick cap">400 FT · CEILING</div>
         <div class="tick">300 FT</div>
         <div class="tick">200 FT</div>
         <div class="tick">100 FT</div>
@@ -360,8 +358,7 @@ footer a { text-decoration: none; }
       <div class="stat"><b>5+</b><span class="mono">Years on the road</span></div>
       <div class="stat"><b>50</b><span class="mono">States</span></div>
       <div class="stat"><b>~30</b><span class="mono">Countries</span></div>
-      <div class="stat"><b>3</b><span class="mono">Cameras, ground &amp; air</span></div>
-      <div class="stat"><b class="br">107</b><span class="mono">FAA certified</span></div>
+      <div class="stat"><b>4</b><span class="mono">Cameras, ground &amp; air</span></div>
     </div>
   </div>
 
@@ -390,7 +387,7 @@ footer a { text-decoration: none; }
       </div>
       <div class="svc">
         <article>
-          <span class="mono">A7C · Mavic 3</span>
+          <span class="mono">A7C · Mavic 3 · Action 3</span>
           <h3>Art &amp; travel</h3>
           <p>Photo and film for travel, outdoor and vehicle brands, and prints for people who want the real road on their wall.</p>
           <ul><li>Landscape and travel stills</li><li>Short films and reels</li><li>Fine-art prints</li></ul>
@@ -398,11 +395,11 @@ footer a { text-decoration: none; }
         <article>
           <span class="mono br">Part 107 certified</span>
           <h3>Commercial drone work</h3>
-          <p>Licensed, insured-on-request aerial work for businesses, owners and builders, flown within FAA rules.</p>
+          <p>Aerial photo, video and mapping for businesses, owners and builders.</p>
           <ul><li>Real estate and land</li><li>Roof and structure inspection</li><li>Construction progress</li><li>Mapping and photogrammetry</li><li>Events and venues</li></ul>
         </article>
         <article>
-          <span class="mono">Avata</span>
+          <span class="mono">Avata · Action 3</span>
           <h3>FPV fly-throughs</h3>
           <p>Close, flowing one-take flights through buildings, trails and tight spaces that a standard drone can't reach.</p>
           <ul><li>Business and venue tours</li><li>Trail and outdoor runs</li><li>Action and music video shots</li></ul>
@@ -456,7 +453,7 @@ footer a { text-decoration: none; }
         <div>
           <p class="eyebrow mono">Builds</p>
           <h2 id="proj-title">Projects</h2>
-          <p class="sub">Software I write for the field: search and rescue, mapping and open-source tools.</p>
+          <p class="sub">Software I write for my own work: search and rescue in the field, and a studio that gets footage from card to edit.</p>
         </div>
         <a class="btn" href="https://github.com/R0N1N9" target="_blank" rel="noopener">GitHub · R0N1N9 ↗</a>
       </div>
@@ -474,6 +471,7 @@ footer a { text-decoration: none; }
             <li><b>Sony A7C</b><span class="role mono">Primary</span><p>Full-frame mirrorless, 24 MP, 4K video. Small enough to carry on every hike.</p></li>
             <li><b>DJI Mavic 3</b><span class="role mono">Aerial</span><p>Four Thirds Hasselblad sensor, 20 MP stills and 5.1K video. Also the search platform.</p></li>
             <li><b>DJI Avata</b><span class="role mono">FPV</span><p>Ducted FPV drone for close-quarters flying and immersive 4K footage.</p></li>
+            <li><b>DJI Osmo Action 3</b><span class="role mono">Action</span><p>Rugged 4K/120fps action camera, waterproof without a case. Mounts on the rig, the bike or the board.</p></li>
           </ul>
         </div>
         <div>
@@ -500,7 +498,7 @@ footer a { text-decoration: none; }
           <div class="copy">
             <p>For more than five years I've lived on the road, out of a Subaru Forester and now a Hyundai Ioniq 5, following the light across all 50 states.</p>
             <p>Before that, and in between, I've traveled to nearly 30 countries. Photography and film are how I keep the places I pass through.</p>
-            <p>I shoot on the ground with a Sony A7C and in the air with a DJI Mavic 3 and Avata, and I'm an FAA Part 107 certified remote pilot. If you need a place captured, there's a good chance I'm already headed somewhere nearby.</p>
+            <p>I shoot on the ground with a Sony A7C and DJI Osmo Action 3, and in the air with a DJI Mavic 3 and Avata. I'm an FAA Part 107 certified remote pilot. If you need a place captured, there's a good chance I'm already headed somewhere nearby.</p>
           </div>
         </div>
       </div>
@@ -538,7 +536,7 @@ footer a { text-decoration: none; }
             <label class="mono" for="cf-type">What do you need?</label>
             <select id="cf-type" name="inquiry">
               <option value="Photo or video project">Photo or video project</option>
-              <option value="Commercial drone work (Part 107)">Commercial drone work (Part 107)</option>
+              <option value="Commercial drone work">Commercial drone work</option>
               <option value="FPV fly-through">FPV fly-through</option>
               <option value="Search and rescue / agency">Search and rescue / agency</option>
               <option value="Prints">Prints</option>
@@ -597,7 +595,7 @@ footer a { text-decoration: none; }
     blood:    { bg: ["#170f0e", "#3a1715"], line: "#9a4a40" },
     hero:     { bg: null, line: tok("--od") }
   };
-  var CAT_TONE = { aerial: "midnight", ground: "earth", fpv: "od", video: "blood", sar: "midnight" };
+  var CAT_TONE = { aerial: "midnight", ground: "earth", fpv: "od", action: "steel", video: "blood", sar: "midnight" };
   function rng(seed) { var s = seed * 9301 + 49297; return function () { s = (s * 9301 + 49297) % 233280; return s / 233280; }; }
   function field(seed) {
     var r = rng(seed), terms = [];
@@ -684,8 +682,8 @@ footer a { text-decoration: none; }
   function hash(str) { var h = 0; for (var i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) | 0; return Math.abs(h) % 97 + 3; }
 
   /* ---------- Work grid ---------- */
-  var LABELS = { ground: "Ground", aerial: "Aerial", fpv: "FPV", video: "Video", sar: "SAR" };
-  var ORDER = ["ground", "aerial", "fpv", "video", "sar"];
+  var LABELS = { ground: "Ground", aerial: "Aerial", fpv: "FPV", action: "Action", video: "Video", sar: "SAR" };
+  var ORDER = ["ground", "aerial", "fpv", "action", "video", "sar"];
   var grid = document.getElementById("grid"), filtersEl = document.getElementById("filters");
   var lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img"), lbTitle = document.getElementById("lb-title");
   document.getElementById("lb-close").addEventListener("click", function () { lb.close(); });

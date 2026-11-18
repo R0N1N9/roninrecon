@@ -5,7 +5,268 @@
     "gear": "Mavic 3",
     "location": "",
     "image": "media/images/moonlit-switchbacks.jpg",
-    "size": "full",
+    "size": "wide",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Bandshell, late light",
+    "category": "art",
+    "gear": "Sony A7C",
+    "location": "Central Park, NY",
+    "image": "media/images/bandshell.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Forester in the valley",
+    "category": "aerial",
+    "gear": "Mavic 3",
+    "location": "",
+    "image": "media/images/forester-valley.jpg",
+    "size": "wide",
+    "video_url": "",
+    "crop": "bottom"
+  },
+  {
+    "title": "Peacock",
+    "category": "wildlife",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/peacock.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Rose, held",
+    "category": "art",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/rose.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Bonfire",
+    "category": "events",
+    "gear": "",
+    "location": "",
+    "image": "media/images/bonfire.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Trinidad Harbor",
+    "category": "aerial",
+    "gear": "Mavic 3",
+    "location": "Trinidad, CA",
+    "image": "media/images/trinidad-harbor.jpg",
+    "size": "wide",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Barred owl",
+    "category": "wildlife",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/barred-owl.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Bulls in velvet",
+    "category": "wildlife",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/elk-in-velvet.jpg",
+    "size": "wide",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Water lily",
+    "category": "nature",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/water-lily.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Behind the brim",
+    "category": "art",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/behind-the-brim.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Night glow",
+    "category": "events",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/balloon-night-glow.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Queen Anne's lace",
+    "category": "nature",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/queen-annes-lace.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Legacy flight",
+    "category": "events",
+    "gear": "Sony A7C",
+    "location": "F8F Bearcat & F/A-18F",
+    "image": "media/images/legacy-flight.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "The Man and the rabbit",
+    "category": "events",
+    "gear": "Sony A7C",
+    "location": "Black Rock City, NV",
+    "image": "media/images/black-rock-rabbit.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Pampas in the wind",
+    "category": "nature",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/pampas-in-the-wind.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Paraglider",
+    "category": "events",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/paraglider.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Ice plant bloom",
+    "category": "nature",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/ice-plant-bloom.jpg",
+    "size": "tall",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Antelope Canyon",
+    "category": "landscape",
+    "gear": "",
+    "location": "Antelope Canyon, AZ",
+    "image": "media/images/antelope-canyon.jpg",
+    "size": "wide",
+    "crop": "center",
     "video_url": ""
+  },
+  {
+    "title": "White on white",
+    "category": "landscape",
+    "gear": "Sony A7C",
+    "location": "White Sands NP, NM",
+    "image": "media/images/white-sands-dunes.jpg",
+    "size": "tall",
+    "crop": "center",
+    "video_url": ""
+  },
+  {
+    "title": "Hoodoos under the stars",
+    "category": "landscape",
+    "gear": "",
+    "location": "",
+    "image": "media/images/hoodoos-at-night.jpg",
+    "size": "wide",
+    "crop": "center",
+    "video_url": ""
+  },
+  {
+    "title": "Night leaves",
+    "category": "nature",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/night-leaves.jpg",
+    "size": "tall",
+    "crop": "center",
+    "video_url": ""
+  },
+  {
+    "title": "Dunes at blue hour",
+    "category": "landscape",
+    "gear": "",
+    "location": "",
+    "image": "media/images/blue-hour-dunes.jpg",
+    "size": "tall",
+    "crop": "center",
+    "video_url": ""
+  },
+  {
+    "title": "Sea stacks, top down",
+    "category": "aerial",
+    "gear": "Mavic 3",
+    "location": "",
+    "image": "media/images/sea-stacks-top-down.jpg",
+    "size": "normal",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Driftwood shelter",
+    "category": "landscape",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/driftwood-shelter.jpg",
+    "size": "normal",
+    "video_url": "",
+    "crop": "center"
+  },
+  {
+    "title": "Yellow Mounds",
+    "category": "landscape",
+    "gear": "Sony A7C",
+    "location": "Badlands NP, SD",
+    "image": "media/images/badlands-yellow-mounds.jpg",
+    "size": "wide",
+    "crop": "center",
+    "video_url": ""
+  },
+  {
+    "title": "Surf and stone",
+    "category": "nature",
+    "gear": "Sony A7C",
+    "location": "",
+    "image": "media/images/surf-foam.jpg",
+    "size": "normal",
+    "video_url": "",
+    "crop": "center"
   }
 ]

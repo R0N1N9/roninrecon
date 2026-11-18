@@ -629,7 +629,7 @@ footer a { text-decoration: none; }
     blood:    { bg: ["#170f0e", "#3a1715"], line: "#9a4a40" },
     hero:     { bg: null, line: tok("--od") }
   };
-  var CAT_TONE = { aerial: "midnight", ground: "earth", fpv: "od", action: "steel", video: "blood", sar: "midnight" };
+  var CAT_TONE = { art: "steel", wildlife: "earth", nature: "od", landscape: "earth", aerial: "midnight", events: "blood", ground: "earth", fpv: "od", action: "steel", video: "blood", sar: "midnight" };
   function rng(seed) { var s = seed * 9301 + 49297; return function () { s = (s * 9301 + 49297) % 233280; return s / 233280; }; }
   function field(seed) {
     var r = rng(seed), terms = [];
@@ -716,8 +716,8 @@ footer a { text-decoration: none; }
   function hash(str) { var h = 0; for (var i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) | 0; return Math.abs(h) % 97 + 3; }
 
   /* ---------- Work grid ---------- */
-  var LABELS = { ground: "Ground", aerial: "Aerial", fpv: "FPV", action: "Action", video: "Video", sar: "SAR" };
-  var ORDER = ["ground", "aerial", "fpv", "action", "video", "sar"];
+  var LABELS = { art: "Street & art", wildlife: "Wildlife", nature: "Nature", landscape: "Landscape", aerial: "Aerial", events: "Events", ground: "Ground", fpv: "FPV", action: "Action", video: "Video", sar: "SAR" };
+  var ORDER = ["art", "landscape", "wildlife", "nature", "aerial", "events", "ground", "fpv", "action", "video", "sar"];
   var grid = document.getElementById("grid"), filtersEl = document.getElementById("filters");
   var lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img"), lbTitle = document.getElementById("lb-title");
   document.getElementById("lb-close").addEventListener("click", function () { lb.close(); });
@@ -732,7 +732,9 @@ footer a { text-decoration: none; }
       var fig = el("figure", { class: "shot" + (size ? " " + size : ""), "data-cat": cat });
       var meta = [it.gear, it.location].filter(Boolean).join(" · ") || LABELS[cat] || "";
       if (it.image) {
-        fig.appendChild(el("img", { src: it.image, alt: it.title || "", loading: "lazy", decoding: "async" }));
+        var im = el("img", { src: it.image, alt: it.title || "", loading: "lazy", decoding: "async" });
+        if (it.crop === "top" || it.crop === "bottom") im.style.objectPosition = "center " + it.crop;
+        fig.appendChild(im);
       } else {
         fig.appendChild(el("canvas", { "data-seed": String(hash(it.title || cat)), "data-tone": CAT_TONE[cat] || "od", "aria-hidden": "true" }));
         fig.appendChild(el("span", { class: "tag mono", text: "Sample" }));

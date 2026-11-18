@@ -22,10 +22,20 @@ content:
         description: Which filter button this shows up under.
         options:
           values:
+            - name: art
+              label: Street & art
+            - name: wildlife
+              label: Wildlife
+            - name: nature
+              label: Nature
+            - name: landscape
+              label: Landscape
+            - name: aerial
+              label: Aerial
+            - name: events
+              label: Events
             - name: ground
               label: Ground (A7C)
-            - name: aerial
-              label: Aerial (Mavic 3)
             - name: fpv
               label: FPV (Avata)
             - name: action
@@ -61,6 +71,18 @@ content:
               label: Tall (2 rows)
             - name: full
               label: Full width (whole row, 2 rows tall)
+      - name: crop
+        label: Crop focus
+        type: select
+        description: Which part of the photo to keep when the tile crops it.
+        options:
+          values:
+            - name: center
+              label: Center
+            - name: top
+              label: Top
+            - name: bottom
+              label: Bottom
       - name: video_url
         label: Video link
         type: string

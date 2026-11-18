@@ -134,7 +134,7 @@ h1 .lo { color: var(--earth); }
 
 /* Stats */
 .stats { border-bottom: 1px solid var(--rule); }
-.stats .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.stats .wrap { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .stat { padding: 26px 20px 24px 0; display: grid; gap: 6px; align-content: start; }
 .stat + .stat { border-left: 1px solid var(--rule); padding-left: 20px; }
 .stat b { font: 800 clamp(2rem, 4vw, 2.8rem)/1 var(--display); font-variant-numeric: tabular-nums; }
@@ -143,6 +143,7 @@ h1 .lo { color: var(--earth); }
   .stats .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .stat:nth-child(odd) { border-left: 0; padding-left: 0; }
   .stat:nth-child(n+3) { border-top: 1px solid var(--rule); }
+  .stat:nth-child(5) { grid-column: 1 / -1; }
 }
 
 /* Sections */
@@ -361,6 +362,7 @@ footer a { text-decoration: none; }
       <div class="stat"><b>5+</b><span class="mono">Years on the road</span></div>
       <div class="stat"><b>50</b><span class="mono">States</span></div>
       <div class="stat"><b>30</b><span class="mono">Countries</span></div>
+      <div class="stat"><b>56</b><span class="mono">National parks</span></div>
       <div class="stat"><b>4</b><span class="mono">Cameras, ground &amp; air</span></div>
     </div>
   </div>

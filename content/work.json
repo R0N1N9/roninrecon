@@ -1,83 +1,74 @@
 [
   {
-    "title": "Canyon rim at dusk",
-    "category": "aerial",
-    "gear": "Mavic 3",
+    "title": "Under the overhang, moonrise",
+    "category": "ground",
+    "gear": "Sony A7C",
     "location": "",
-    "image": "",
+    "image": "media/images/overhang-moonrise.jpg",
     "size": "wide",
     "video_url": ""
   },
   {
-    "title": "Night camp, Forester",
+    "title": "Ridge line",
     "category": "ground",
-    "gear": "A7C",
+    "gear": "Sony A7C",
     "location": "",
-    "image": "",
+    "image": "media/images/boulder-ridge.jpg",
     "size": "tall",
     "video_url": ""
   },
   {
-    "title": "Through the pines",
-    "category": "fpv",
-    "gear": "Avata",
-    "location": "",
-    "image": "",
-    "size": "normal",
-    "video_url": ""
-  },
-  {
-    "title": "Market street, overseas",
+    "title": "Tunnel Log",
     "category": "ground",
-    "gear": "A7C",
-    "location": "",
-    "image": "",
+    "gear": "Sony A7C",
+    "location": "Sequoia NP, CA",
+    "image": "media/images/sequoia-tunnel-log.jpg",
     "size": "normal",
     "video_url": ""
   },
   {
-    "title": "Road film reel",
-    "category": "video",
-    "gear": "A7C + Mavic 3",
-    "location": "",
-    "image": "",
-    "size": "normal",
-    "video_url": "https://www.youtube.com/@R0N1N_42"
-  },
-  {
-    "title": "Switchbacks, top down",
-    "category": "aerial",
-    "gear": "Mavic 3",
-    "location": "",
-    "image": "",
+    "title": "Saguaro at sundown",
+    "category": "ground",
+    "gear": "",
+    "location": "Sonoran Desert, AZ",
+    "image": "media/images/saguaro-sunset.jpg",
     "size": "normal",
     "video_url": ""
   },
   {
-    "title": "Ridge dive, one take",
-    "category": "video",
-    "gear": "Avata",
+    "title": "Slot canyon",
+    "category": "ground",
+    "gear": "Sony A7C",
     "location": "",
-    "image": "",
+    "image": "media/images/canyon-walk.jpg",
+    "size": "normal",
+    "video_url": ""
+  },
+  {
+    "title": "Badlands overlook",
+    "category": "ground",
+    "gear": "Sony A7C",
+    "location": "Badlands NP, SD",
+    "image": "media/images/badlands-overlook.jpg",
     "size": "wide",
     "video_url": ""
   },
   {
-    "title": "Coastline from above",
-    "category": "aerial",
-    "gear": "Mavic 3",
-    "location": "",
-    "image": "",
+    "title": "Kit check at last light",
+    "category": "ground",
+    "gear": "",
+    "location": "White Sands NP, NM",
+    "image": "media/images/white-sands-kit.jpg",
     "size": "normal",
     "video_url": ""
   },
   {
-    "title": "Abandoned mill fly-through",
-    "category": "fpv",
-    "gear": "Avata",
-    "location": "",
-    "image": "",
-    "size": "normal",
+    "title": "Into the valley",
+    "category": "ground",
+    "gear": "Sony A7C",
+    "location": "Glacier NP, MT",
+    "image": "media/images/glacier-ridge.jpg",
+    "size": "wide",
     "video_url": ""
   }
 ]

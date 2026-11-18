@@ -1,0 +1,126 @@
+# Pages CMS configuration: edit the site at https://app.pagescms.org (sign in with GitHub).
+media:
+  input: media/images
+  output: media/images
+  categories: [image]
+
+content:
+  - name: work
+    label: Portfolio (photos & video)
+    type: file
+    path: content/work.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: category
+        label: Category
+        type: select
+        description: Which filter button this shows up under.
+        options:
+          values:
+            - name: ground
+              label: Ground (A7C)
+            - name: aerial
+              label: Aerial (Mavic 3)
+            - name: fpv
+              label: FPV (Avata)
+            - name: video
+              label: Video
+            - name: sar
+              label: Search & rescue
+      - name: image
+        label: Photo
+        type: image
+        description: JPG or WebP, about 2000 px on the long edge. Leave empty to show a placeholder.
+        options:
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+      - name: gear
+        label: Shot on
+        type: string
+        description: e.g. A7C, Mavic 3, Avata
+      - name: location
+        label: Location
+        type: string
+      - name: size
+        label: Tile size
+        type: select
+        options:
+          values:
+            - name: normal
+              label: Normal
+            - name: wide
+              label: Wide (2 columns)
+            - name: tall
+              label: Tall (2 rows)
+      - name: video_url
+        label: Video link
+        type: string
+        description: Optional YouTube or Vimeo link. The tile opens the video instead of the photo.
+
+  - name: projects
+    label: Projects
+    type: file
+    path: content/projects.json
+    format: json
+    list: true
+    fields:
+      - name: name
+        label: Project name
+        type: string
+        required: true
+      - name: kicker
+        label: Small label above the name
+        type: string
+      - name: summary
+        label: Summary
+        type: text
+      - name: points
+        label: Highlights
+        type: string
+        list: true
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: image
+        label: Screenshot
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+      - name: link
+        label: Link
+        type: string
+        description: Leave empty for a private project.
+      - name: link_label
+        label: Link text
+        type: string
+        description: Button text, or a note shown when there is no link.
+
+  - name: site
+    label: Contact & settings
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: email
+        label: Contact email
+        type: string
+      - name: formspree_id
+        label: Formspree form ID
+        type: string
+        description: The code after formspree.io/f/ in your form's endpoint. Leave empty to turn the form off.
+      - name: instagram
+        label: Instagram handle (no @)
+        type: string
+      - name: youtube
+        label: YouTube handle (no @)
+        type: string
+      - name: base
+        label: Based
+        type: string

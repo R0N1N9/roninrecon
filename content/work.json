@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Canyon rim at dusk",
+    "category": "aerial",
+    "gear": "Mavic 3",
+    "location": "",
+    "image": "",
+    "size": "wide",
+    "video_url": ""
+  },
+  {
+    "title": "Night camp, Forester",
+    "category": "ground",
+    "gear": "A7C",
+    "location": "",
+    "image": "",
+    "size": "tall",
+    "video_url": ""
+  },
+  {
+    "title": "Through the pines",
+    "category": "fpv",
+    "gear": "Avata",
+    "location": "",
+    "image": "",
+    "size": "normal",
+    "video_url": ""
+  },
+  {
+    "title": "Market street, overseas",
+    "category": "ground",
+    "gear": "A7C",
+    "location": "",
+    "image": "",
+    "size": "normal",
+    "video_url": ""
+  },
+  {
+    "title": "Road film reel",
+    "category": "video",
+    "gear": "A7C + Mavic 3",
+    "location": "",
+    "image": "",
+    "size": "normal",
+    "video_url": "https://www.youtube.com/@R0N1N_42"
+  },
+  {
+    "title": "Switchbacks, top down",
+    "category": "aerial",
+    "gear": "Mavic 3",
+    "location": "",
+    "image": "",
+    "size": "normal",
+    "video_url": ""
+  },
+  {
+    "title": "Ridge dive, one take",
+    "category": "video",
+    "gear": "Avata",
+    "location": "",
+    "image": "",
+    "size": "wide",
+    "video_url": ""
+  },
+  {
+    "title": "Coastline from above",
+    "category": "aerial",
+    "gear": "Mavic 3",
+    "location": "",
+    "image": "",
+    "size": "normal",
+    "video_url": ""
+  },
+  {
+    "title": "Abandoned mill fly-through",
+    "category": "fpv",
+    "gear": "Avata",
+    "location": "",
+    "image": "",
+    "size": "normal",
+    "video_url": ""
+  }
+]

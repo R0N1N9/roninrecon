@@ -223,6 +223,23 @@ dialog.lb::backdrop { background: color-mix(in srgb, var(--ink) 94%, transparent
 .lb-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 .lb-bar .t { font: 700 1.4rem/1.1 var(--display); text-transform: uppercase; }
 
+/* Film */
+.film { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.reel { margin: 0; display: grid; gap: 12px; min-width: 0; }
+.reel .frame { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: var(--panel); border: 1px solid var(--rule); overflow: hidden; }
+.reel .frame img, .reel .frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
+.reel .frame button { all: unset; position: absolute; inset: 0; cursor: pointer; }
+.reel .frame button:focus-visible { outline: 2px solid var(--bronze); outline-offset: -2px; }
+.reel .frame .play { width: 72px; height: 72px; }
+.reel .frame button:hover .play { border-color: var(--bronze); background: color-mix(in srgb, var(--ink) 60%, transparent); }
+.reel figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; }
+.reel figcaption .k { color: var(--bronze); }
+.reel figcaption h3 { font: 700 1.6rem/1 var(--display); text-transform: uppercase; margin: 4px 0 0; }
+.reel figcaption a { color: var(--dim); text-decoration: none; }
+.reel figcaption a:hover { color: var(--bone); }
+.reel figcaption p { flex-basis: 100%; margin: 0; color: var(--dim); }
+@media (max-width: 760px) { .film { grid-template-columns: minmax(0, 1fr); } }
+
 /* Services */
 .svc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--rule); }
 .svc article { padding: 28px 24px 8px 0; display: grid; gap: 10px; align-content: start; min-width: 0; }
@@ -351,6 +368,7 @@ footer a { text-decoration: none; }
     <a class="mark" href="#top" aria-label="RoninRecon home"><span class="rec" aria-hidden="true"></span><b>Ronin<span>Recon</span></b></a>
     <nav class="nav" aria-label="Sections">
       <a href="#work">Work</a>
+      <a class="opt" href="#film">Film</a>
       <a class="opt" href="#services">Services</a>
       <a href="#sar">ISR</a>
       <a class="opt" href="#projects">Projects</a>
@@ -410,7 +428,21 @@ footer a { text-decoration: none; }
         <div class="filters" id="filters" role="group" aria-label="Filter work"></div>
       </div>
       <div class="grid" id="grid" aria-live="polite"></div>
-      <div class="more-wrap"><button class="btn" type="button" id="more" hidden>Show more</button></div>
+      <div class="more-wrap"><button class="btn" type="button" id="more" hidden>Show all</button></div>
+    </div>
+  </section>
+
+  <section class="block" id="film" aria-labelledby="film-title">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow mono">Reels</p>
+          <h2 id="film-title">Film</h2>
+          <p class="sub">Moving pictures from the air and the ground.</p>
+        </div>
+        <a class="btn" id="yt-channel" href="https://www.youtube.com/@R0N1N_42" target="_blank" rel="noopener">YouTube channel ↗</a>
+      </div>
+      <div class="film" id="film-list"></div>
     </div>
   </section>
 
@@ -804,14 +836,14 @@ footer a { text-decoration: none; }
     match.forEach(function (s, i) { s.hidden = i >= show; });
     var left = match.length - show;
     moreBtn.hidden = left <= 0;
-    if (left > 0) { moreBtn.textContent = "Show more "; moreBtn.appendChild(el("span", { class: "n", text: "(" + left + ")" })); }
+    if (left > 0) { moreBtn.textContent = "Show all "; moreBtn.appendChild(el("span", { class: "n", text: "(" + left + ")" })); }
     shown = show;
     paintAll();
   }
   var shown = 0;
   moreBtn.addEventListener("click", function () {
     var first = shown;
-    limit = shown + PAGE;
+    limit = Infinity;
     applyVisibility();
     var next = Array.prototype.slice.call(grid.querySelectorAll(".shot")).filter(function (s) { return !s.hidden; })[first];
     var focusable = next && next.querySelector("a, button");
@@ -819,6 +851,41 @@ footer a { text-decoration: none; }
   });
   var lastCols = 0;
   window.addEventListener("resize", function () { var c = gridCols(); if (c !== lastCols) { lastCols = c; if (grid.children.length) applyVisibility(); } });
+
+  /* ---------- Film (click-to-load YouTube) ---------- */
+  function ytId(url) {
+    var m = String(url || "").match(/(?:youtu\.be\/|v=|\/embed\/|\/shorts\/)([A-Za-z0-9_-]{11})/);
+    return m ? m[1] : "";
+  }
+  function renderFilm(items) {
+    var list = document.getElementById("film-list"), section = document.getElementById("film");
+    list.textContent = "";
+    items = items.filter(function (f) { return ytId(f.url); });
+    if (!items.length) { section.hidden = true; return; }
+    section.hidden = false;
+    items.forEach(function (f) {
+      var id = ytId(f.url), watch = "https://www.youtube.com/watch?v=" + id;
+      var frame = el("div", { class: "frame" }, [
+        (function () { var t = el("img", { src: "https://i.ytimg.com/vi/" + id + "/hqdefault.jpg", alt: "", loading: "lazy" }); t.addEventListener("error", function () { t.remove(); }); return t; })(),
+        el("span", { class: "play", "aria-hidden": "true" })
+      ]);
+      var btn = el("button", { type: "button", "aria-label": "Play " + (f.title || "video") });
+      btn.addEventListener("click", function () {
+        frame.textContent = "";
+        frame.appendChild(el("iframe", {
+          src: "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1",
+          title: f.title || "Video", allow: "autoplay; encrypted-media; picture-in-picture; fullscreen", allowfullscreen: ""
+        }));
+      });
+      frame.appendChild(btn);
+      var cap = el("figcaption", {}, [
+        el("div", {}, [f.kicker ? el("span", { class: "k mono", text: f.kicker }) : null, el("h3", { text: f.title || "" })]),
+        el("a", { class: "mono", href: watch, target: "_blank", rel: "noopener", text: "Watch on YouTube ↗" }),
+        f.note ? el("p", { text: f.note }) : null
+      ]);
+      list.appendChild(el("figure", { class: "reel" }, [frame, cap]));
+    });
+  }
 
   /* ---------- Projects ---------- */
   function renderProjects(items) {
@@ -846,11 +913,12 @@ footer a { text-decoration: none; }
     for (var k in s) settings[k] = s[k];
     if (s.email) document.getElementById("email").textContent = s.email;
     if (s.instagram) { var ig = document.getElementById("ig"); ig.textContent = "@" + s.instagram; ig.href = "https://www.instagram.com/" + s.instagram + "/"; }
-    if (s.youtube) { var yt = document.getElementById("yt"); yt.textContent = "@" + s.youtube; yt.href = "https://www.youtube.com/@" + s.youtube; }
+    if (s.youtube) { document.getElementById("yt-channel").href = "https://www.youtube.com/@" + s.youtube; } if (s.youtube) { var yt = document.getElementById("yt"); yt.textContent = "@" + s.youtube; yt.href = "https://www.youtube.com/@" + s.youtube; }
     if (s.base) document.getElementById("base").textContent = s.base;
   }
 
-  Promise.allSettled([getJSON("content/work.json"), getJSON("content/projects.json"), getJSON("content/site.json")]).then(function (r) {
+  Promise.allSettled([getJSON("content/work.json"), getJSON("content/projects.json"), getJSON("content/site.json"), getJSON("content/film.json")]).then(function (r) {
+    renderFilm(r[3].status === "fulfilled" && Array.isArray(r[3].value) ? r[3].value : []);
     renderWork(r[0].status === "fulfilled" && Array.isArray(r[0].value) ? r[0].value : []);
     renderProjects(r[1].status === "fulfilled" && Array.isArray(r[1].value) ? r[1].value : []);
     if (r[2].status === "fulfilled") applySite(r[2].value || {});

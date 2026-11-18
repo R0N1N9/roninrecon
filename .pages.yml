@@ -88,6 +88,30 @@ content:
         type: string
         description: Optional YouTube or Vimeo link. The tile opens the video instead of the photo.
 
+  - name: film
+    label: Film (YouTube reels)
+    type: file
+    path: content/film.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: kicker
+        label: Small label above the title
+        type: string
+        description: e.g. Drone · DJI Mavic 3
+      - name: url
+        label: YouTube link
+        type: string
+        required: true
+        description: Paste any YouTube link (youtu.be, watch, or shorts).
+      - name: note
+        label: Short description
+        type: text
+
   - name: projects
     label: Projects
     type: file

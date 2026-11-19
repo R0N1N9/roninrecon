@@ -6,6 +6,17 @@ A [RoninSec](https://r0n1n9.github.io/roninsec/) brand. Live at https://r0n1n9.g
 
 Static site, no build step. `.nojekyll` tells GitHub Pages to serve it as-is.
 
+![RoninRecon homepage: "Ground level to 400 feet AGL" hero beside a canyon-rim photo](docs/screenshots/home.png)
+
+## Screenshots
+
+| Portfolio | Projects |
+|---|---|
+| ![Selected Work grid with category filters](docs/screenshots/portfolio.png) | ![Projects section featuring IntelScraperStudio](docs/screenshots/projects.png) |
+| Filterable portfolio of stills and film, from `content/work.json`. | Project cards from `content/projects.json`. |
+
+The page also has Film, Services, Search & Rescue (ISR), Kit, About and Contact sections.
+
 ## What lives where
 
 | File | What it controls |

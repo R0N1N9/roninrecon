@@ -21,7 +21,7 @@
     "link_label": "View on GitHub"
   },
   {
-    "name": "ISR Studio",
+    "name": "ISRStudio",
     "kicker": "Search & rescue · Mapping",
     "summary": "An offline toolkit for a Mavic 3 and DJI RC. It scans every photo on an SD card for signs of a missing person, plans search and mapping flights, and hands ground teams coordinates they can use.",
     "points": [
